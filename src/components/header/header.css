@@ -19,6 +19,12 @@
 .nav__toggle {
     color: var(--title-color);
     font-weight: var(--font-medium);
+    font-size: var(--h3-font-size);
+}
+
+.nav__logo__part {
+  color: red;
+  font-size: 2.2rem;
 }
 
 .nav__list {
@@ -52,12 +58,16 @@
 
 /* medium devices */
 @media screen and (max-width:768px) {
+
+  .nav__logo {
+      font-size: 1.1rem;
+  }
   .header {
     top: initial;
     bottom: 0;
   }
   .nav {
-    height: var(--header-height);
+    height: var(--header-height + 1rem);
   }
 
   .nav__menu {
@@ -102,7 +112,7 @@
   }
 
   .nav__toggle {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     cursor: pointer;
   }
 

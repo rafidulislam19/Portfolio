@@ -43,7 +43,9 @@
 } */
 
 /*=============== GOOGLE FONTS ===============*/
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
 
 /*=============== VARIABLES CSS ===============*/
 :root {
@@ -77,7 +79,7 @@
   --font-medium: 500;
   --font-semi-bold: 600;
 
-  /*========== Margenes Bottom ==========*/
+  /*========== Margin Bottom ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
   --mb-0-25: 0.25rem;
   --mb-0-5: 0.5rem;
@@ -260,4 +262,3 @@ img {
     margin-right: var(--mb-1);
   }
 }
-
