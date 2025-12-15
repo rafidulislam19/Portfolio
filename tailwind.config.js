@@ -1,10 +1,15 @@
-import './index.css'
+import './index.css';
+
 
 export default {
+  important: ".tw",
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  corePlugins: {
+      preflight: false,
+  },
   theme: {
     extend: {
       fontFamily: {
