@@ -16,9 +16,7 @@ const About = () => {
           <Info />
 
           <p className="about__description">
-            Frontend developer, I create web pages with UI / UX user interface,
-            I have years of experience and many clients are happy with the
-            projects carried out.
+            Officer at BRAC Bank PLC, Technology Division, specializing in Software Development. With a BSc in Computer Science and Engineering from North South University, I have a strong foundation in coding, system design, and project management. My work focuses on developing and maintaining innovative banking solutions. Enthusiastic about clean code, system optimization, and scalable solutions. Constantly exploring new technologies and contributing to impactful projects.
           </p>
 
           <a download="" href={CV} className="button button--flex">
