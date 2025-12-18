@@ -13,6 +13,7 @@ import Contact from './components/contact/Contact'
 import Footer from './components/footer/Footer'
 import ScrollUp from './components/scrollup/ScrollUp'
 import Projects from './components/projects/Projects'
+import Work from './components/work/Work'
 
 
 function App() {
@@ -27,7 +28,11 @@ function App() {
         <Skills />
         <Services />
         <Qualification />
+        {/* <div className="tw">
+          <Projects />
+        </div> */}
         {/* <Projects /> */}
+        <Work />
         <Testimonials />
         <Contact />
       </main>

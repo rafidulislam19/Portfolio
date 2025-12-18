@@ -1,8 +1,13 @@
-/* @tailwind utilities; */
 
 /*=============== GOOGLE FONTS ===============*/
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
 
 /*=============== VARIABLES CSS ===============*/
@@ -118,6 +123,10 @@ img {
 }
 
 /*=============== REUSABLE CSS CLASSES ===============*/
+/* .main {
+  padding-top: calc(var(--header-height)+1.5rem);
+} */
+
 .section {
   padding: 6rem 0 2rem;
 }
@@ -139,13 +148,13 @@ img {
 }
 
 /*=============== LAYOUT ===============*/
-.container {
+.app-container {
   max-width: 968px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.grid {
+.app-grid {
   display: grid;
   gap: 1.5rem;
 }
@@ -176,7 +185,7 @@ img {
 /*=============== BREAKPOINTS ===============*/
 /* For large devices */
 @media screen and (max-width: 992px) {
-  .container {
+  .app-container {
     margin-left: var(--mb-1-5);
     margin-right: var(--mb-1-5);
   }
@@ -215,7 +224,7 @@ img {
     --big-font-size: 2.25rem;
   }
 
-  .container {
+  .app-container {
     margin-left: var(--mb-1);
     margin-right: var(--mb-1);
   }

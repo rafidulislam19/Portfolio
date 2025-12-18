@@ -15,12 +15,12 @@ const Header = () => {
 
   return (
     <header className="header">
-        <nav className="nav container">
+        <nav className="nav app-container">
             <a href="index.html" className="nav__logo">
-                <i class="uil uil-arrow"></i>Rafid<span class="nav__logo__part">.</span>
+                <i class="uil uil-arrow"></i>Rafid<span className="nav__logo__part">.</span>
             </a>
             <div className={Toggle ? "nav__menu show-menu" : "nav__menu"}>
-                <ul className="nav__list grid">
+                <ul className="nav__list app-grid">
                     <li className="nav__item">
                         <a href="#home" onClick={() => setActiveNav('#home')} className={activeNav === '#home' ? "nav__link active-link" : "nav__link"}>
                             <i class="uil uil-estate nav__icon"></i> Home

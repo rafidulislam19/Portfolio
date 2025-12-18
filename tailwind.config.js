@@ -1,8 +1,5 @@
-import './index.css';
-
-
 export default {
-  important: ".tw",
+  prefix: "tw-",
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",

@@ -13,7 +13,7 @@ const Services = () => {
       <h2 className="section__title">Services</h2>
       <span className="section__subtitle">What I Offer</span>
 
-      <div className="services__container container grid">
+      <div className="services__container app-container app-grid">
         <div className="services__content">
           <div>
             <i className="uil uil-web-grid services__icon"></i>
@@ -46,7 +46,7 @@ const Services = () => {
                 work to clients and companies.
               </p>
 
-              <ul className="services__modal-services grid">
+              <ul className="services__modal-services app-grid">
                 <li className="services__modal-service">
                   <i className="uil uil-check-circle services__modal-icon"></i>
                   <p className="services__modal-info">
@@ -108,7 +108,7 @@ const Services = () => {
                 work to clients and companies.
               </p>
 
-              <ul className="services__modal-services grid">
+              <ul className="services__modal-services app-grid">
                 <li className="services__modal-service">
                   <i className="uil uil-check-circle services__modal-icon"></i>
                   <p className="services__modal-info">
@@ -168,7 +168,7 @@ const Services = () => {
                 work to clients and companies.
               </p>
 
-              <ul className="services__modal-services grid">
+              <ul className="services__modal-services app-grid">
                 <li className="services__modal-service">
                   <i className="uil uil-check-circle services__modal-icon"></i>
                   <p className="services__modal-info">

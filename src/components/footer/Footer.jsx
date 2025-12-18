@@ -4,7 +4,7 @@ import "./footer.css";
 const Footer = () => {
   return (
     <footer className="footer">
-        <div className="footer__container container">
+        <div className="footer__container app-container">
             <h1 className="footer__title">Rafid</h1>
 
             <ul className="footer__list">
