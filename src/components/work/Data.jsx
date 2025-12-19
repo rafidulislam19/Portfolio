@@ -21,7 +21,7 @@ export const projectsData = [
     category: "reactJS",
     tags: ["React", "TailwindCSS"],
     demoUrl: "https://learning-management-system-one.vercel.app/",
-    githubUrl: "https://github.com/rafidulislam19/Learning-Management-System",
+    githubUrl: "https://github.com/RISHAD-prog/RBAN-Timing-Solution",
   },
   {
     id: 3,

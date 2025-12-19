@@ -86,7 +86,7 @@
 }
 
 .wheel {
-  animation: scroll 2s ease infinite;
+  animation: scroll 1s ease infinite;
 }
 
 @keyframes scroll {
@@ -175,7 +175,7 @@
     height: 180px;
   }
   .home__hand {
-    width: 22px;
-    height: 22px;
+    width: 35px;
+    height: 35px;
   }
 }
