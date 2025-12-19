@@ -10,6 +10,7 @@ const Home = () => {
     <section className="home section" id="home">
         <div className="home__container app-container app-grid">
             <div className="home__content app-grid">
+              
                 <Social />
 
                 <div className="home__img"></div>

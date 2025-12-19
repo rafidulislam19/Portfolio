@@ -46,12 +46,17 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
-html, body {
+* {
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+html,
+body {
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
-
 
 /*=============== VARIABLES CSS ===============*/
 :root {
@@ -101,6 +106,25 @@ html, body {
   --z-fixed: 100;
   --z-modal: 1000;
 }
+
+/*=============== DARK THEME ===============*/
+/* body.dark-theme {
+  --title-color: hsl(var(--hue), var(--sat), 90%);
+  --title-color-dark: hsl(var(--hue), var(--sat), 100%);
+  --text-color: hsl(var(--hue), var(--sat), 70%);
+  --body-color: hsl(var(--hue), var(--sat), 10%);
+  --container-color: hsl(var(--hue), var(--sat), 15%);
+} */
+
+/*=============== DARK THEME (SOFT / EYE FRIENDLY) ===============*/
+body.dark-theme {
+  --title-color: hsl(210, 20%, 90%);
+  --title-color-dark: hsl(210, 25%, 98%);
+  --text-color: hsl(210, 15%, 72%);
+  --body-color: hsl(220, 13%, 13%);
+  --container-color: hsl(220, 13%, 17%);
+}
+
 
 /* Responsive typography */
 @media screen and (max-width: 992px) {
@@ -271,4 +295,3 @@ img {
     margin-right: var(--mb-1);
   }
 }
-
