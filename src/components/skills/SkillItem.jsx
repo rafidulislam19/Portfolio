@@ -8,7 +8,7 @@ const SkillItem = ({ skill }) => {
       </div>
 
       <h3 className="skills__name">{skill.name}</h3>
-      <span className="skills__level">{skill.level}</span>
+      {/* <span className="skills__level">{skill.level}</span> */}
     </div>
   )
 }
