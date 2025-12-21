@@ -1,6 +1,4 @@
-/* .radial-gradient {
-  background: repeating-radial-gradient(rgba(0,0,0,0.5) 2px,var(--body-color) 5px,var(--body-color) 100px);
-} */
+/* 
 
 .skills__container {
     grid-template-columns: repeat(2, 350px);
@@ -46,33 +44,105 @@
 }
 .skills__level {
     font-size: var(--tiny-font-size);
-}
+} */
 
 /*=============== BREAKPOINTS ===============*/
 /* For large devices */
-@media screen and (max-width: 992px) {
+/* @media screen and (max-width: 992px) {
   .skills__container {
     grid-template-columns: max-content;
     row-gap: 2rem;
   }
-}
+} */
 
 /* For medium devices */
-@media screen and (max-width: 576px) {
+/* @media screen and (max-width: 576px) {
     .skills__container {
     grid-template-columns: 1fr;
   }
   .skills__content {
     padding: 1.5rem;
   }
-}
+} */
 
 /* For small devices */
-@media screen and (max-width: 350px) {
+/* @media screen and (max-width: 350px) {
     .skills__box {
         column-gap: 1.25rem;
     }
     .skills__name {
         font-size: var(--small-font-size);
     }
+} */
+
+.skills__filters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0.75rem;
+  margin-bottom: var(--mb-2);
+}
+
+.skills__item {
+  cursor: pointer;
+  color: var(--title-color);
+  padding: 0.25rem 0.75rem;
+  font-weight: var(--font-medium);
+  border-radius: 0.5rem;
+  text-transform: capitalize;
+}
+
+.skills__item:hover {
+  background-color: var(--title-color);
+  color: var(--container-color);
+}
+
+.active-skill {
+  background-color: var(--title-color);
+  color: var(--container-color);
+}
+
+.skills__container {
+  grid-template-columns: repeat(3, 220px);
+  gap: 2rem;
+  justify-content: center;
+}
+
+.skills__card {
+  background-color: var(--container-color);
+  border: 1px solid rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.skills__icon {
+  font-size: 2rem;
+  color: var(--title-color);
+  margin-bottom: 0.5rem;
+}
+
+.skills__name {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+}
+
+.skills__level {
+  font-size: var(--tiny-font-size);
+}
+
+@media screen and (max-width: 768px) {
+  .skills__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .skills__container {
+    grid-template-columns: 1fr;
+  }
+  .skills__item {
+    font-size: var(--small-font-size);
+  }
+  
 }

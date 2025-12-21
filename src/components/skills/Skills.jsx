@@ -1,30 +1,36 @@
-import React from 'react';
-import "./skills.css";
-import Frontend from './Frontend';
-import Backend from './Backend';
+// import React from 'react';
+// import "./skills.css";
+// import Frontend from './Frontend';
+// import Backend from './Backend';
+
+// const Skills = () => {
+//   return (
+//     <section className="skills section" id="skills">
+//         <h2 className="section__title">Skills</h2>
+//         <span className="section__subtitle">My technical level</span>
+
+//         <div className="skills__container app-container app-grid">
+//             <Frontend />
+//             <Backend />
+//         </div>
+//     </section>
+//   )
+// }
+
+// export default Skills
+
+import React from 'react'
+import "./skills.css"
+import SkillTabs from './SkillTabs'
 
 const Skills = () => {
   return (
     <section className="skills section" id="skills">
-        <h2 className="section__title">Skills</h2>
-        <span className="section__subtitle">My technical level</span>
+      <h2 className="section__title">Skills</h2>
+      <span className="section__subtitle">My technical level</span>
 
-        <div className="skills__container app-container app-grid">
-            <Frontend />
-            <Backend />
-        </div>
+      <SkillTabs />
     </section>
-
-    // <section className="skills section" id="skills">
-    //     <h2 className="section__title">Skills</h2>
-    //     <span className="section__subtitle">My technical level</span>
-
-    //     <div className="skills__container container">
-    //         <div className='w-full h-screen relative flex items-center justify-center rounded-full radial-gradient'>
-              
-    //         </div>
-    //     </div>
-    // </section>
   )
 }
 

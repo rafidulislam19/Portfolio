@@ -1,0 +1,86 @@
+export const skillsNav = [
+  { name: 'all' },
+  { name: 'frontend' },
+  { name: 'backend' },
+  { name: 'tools' },
+];
+
+export const skillsData = [
+  {
+    id: 1,
+    name: "html/CSS",
+    level: "Advanced",
+    category: "frontend",
+    icon: "bx bx-code",
+  },
+  {
+    id: 2,
+    name: "JavaScript",
+    level: "Advanced",
+    category: "frontend",
+    icon: "bx bxl-javascript",
+  },
+  {
+    id: 3,
+    name: "TypeScript",
+    level: "Advanced",
+    category: "frontend",
+    icon: "bx bxl-typescript",
+  },
+  {
+    id: 4,
+    name: "React JS",
+    level: "Intermediate",
+    category: "frontend",
+    icon: "bx bxl-react",
+  },
+  {
+    id: 5,
+    name: "Next JS",
+    level: "Basic",
+    category: "frontend",
+    icon: "bx bx-code-block",
+  },
+  {
+    id: 6,
+    name: "Python",
+    level: "Intermediate",
+    category: "backend",
+    icon: "bx bxl-python",
+  },
+  {
+    id: 7,
+    name: "Django",
+    level: "Intermediate",
+    category: "backend",
+    icon: "bx bx-code-block",
+  },
+  {
+    id: 8,
+    name: "Node JS",
+    level: "Intermediate",
+    category: "backend",
+    icon: "bx bx-code-alt",
+  },
+  {
+    id: 9,
+    name: "MySQL",
+    level: "Advanced",
+    category: "backend",
+    icon: "bx bx-code-block",
+  },
+  {
+    id: 10,
+    name: "Git",
+    level: "Advanced",
+    category: "tools",
+    icon: "bx bxl-git",
+  },
+  {
+    id: 11,
+    name: "VS Code",
+    level: "Advanced",
+    category: "tools",
+    icon: "bx bx-code",
+  },
+];

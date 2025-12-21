@@ -66,8 +66,8 @@
 .scroll-header {
   box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
 }
-.scroll-header-dark {
-  box-shadow: 0 -1px 4px rgba(54, 54, 54, 0.15);
+body.dark-theme .scroll-header {
+  box-shadow: 0 -1px 6px rgba(0, 0, 0, 0.75);
 }
 
 /*=============== THEME TOGGLE ===============*/
@@ -84,7 +84,7 @@
 
 /* Animated theme icon */
 .nav__theme i {
-  /* display: inline-block; */
+  display: inline-block;
   transition: transform 0.45s ease, opacity 0.25s ease;
   opacity: 0.85;
 }
@@ -188,6 +188,10 @@ body.dark-theme .active-link {
   }
   .nav__theme {
     display: block;
+  }
+  /* Hide theme toggle when menu is open */
+  .show-menu ~ .nav__theme {
+    display: none;
   }
 }
 
