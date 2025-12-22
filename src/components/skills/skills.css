@@ -114,6 +114,40 @@
   padding: 1.5rem;
   border-radius: 1rem;
   text-align: center;
+  position: relative;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* Gradient glow hover */
+.skills__card::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(
+    135deg,
+    var(--title-color),
+    transparent
+  );
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.35s ease;
+}
+
+.skills__card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* Dark mode accent glow */
+body.dark-theme .skills__card:hover {
+  box-shadow:
+    0 14px 35px rgba(0, 0, 0, 0.6),
+    0 0 25px rgba(120, 180, 255, 0.45);
+}
+
+.skills__card:hover::before {
+  opacity: 0.6;
 }
 
 .skills__icon {
@@ -146,3 +180,4 @@
   }
   
 }
+

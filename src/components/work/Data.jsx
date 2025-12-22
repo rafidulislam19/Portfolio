@@ -20,7 +20,7 @@ export const projectsData = [
     image: Work2,
     title: "Rban Timing Solution",
     category: "reactJS",
-    tags: ["React JS", "Tailwind CSS"],
+    tags: ["React JS", "Material UI"],
     description: "description",
     demoUrl: "https://learning-management-system-one.vercel.app/",
     githubUrl: "https://github.com/RISHAD-prog/RBAN-Timing-Solution",
