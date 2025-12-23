@@ -117,7 +117,7 @@ const Header = () => {
                     : "nav__link"
                 }
               >
-                <i className="uil uil-scenery nav__icon"></i> Projects
+                <i className="uil uil-setting nav__icon"></i> Projects
               </a>
             </li>
             <li className="nav__item">

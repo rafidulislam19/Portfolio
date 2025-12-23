@@ -26,14 +26,14 @@ function App() {
         <Home />
         <About />
         <Skills />
-        <Services />
+        {/* <Services /> */}
         <Qualification />
         {/* <div className="tw">
           <Projects />
         </div> */}
         {/* <Projects /> */}
         <Work />
-        <Testimonials />
+        {/* <Testimonials /> */}
         <Contact />
       </main>
 

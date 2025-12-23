@@ -169,14 +169,17 @@ body.dark-theme .skills__card:hover {
   .skills__container {
     grid-template-columns: repeat(2, 1fr);
   }
+  .skills__item {
+    font-size: var(--small-font-size);
+  }
 }
 
 @media screen and (max-width: 350px) {
   .skills__container {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
   .skills__item {
-    font-size: var(--small-font-size);
+    font-size: var(--tiny-font-size);
   }
   
 }

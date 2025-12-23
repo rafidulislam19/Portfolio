@@ -185,6 +185,9 @@ body.dark-theme .work__card:hover {
   .work__container {
     grid-template-columns: max-content;
   }
+  .work__item {
+    font-size: var(--smaller-font-size);
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -193,6 +196,9 @@ body.dark-theme .work__card:hover {
   }
   .work__img {
     width: 100%;
+  }
+  .work__item {
+    font-size: var(--tiny-font-size);
   }
   /* .work__filters {
     display: grid;
@@ -205,7 +211,7 @@ body.dark-theme .work__card:hover {
 /* For small devices */
 @media screen and (max-width: 350px) {
   .work__item {
-    font-size: var(--smaller-font-size);
+    font-size: var(--tiny-font-size);
   }
   .work__filters {
     column-gap: 0.01rem;
