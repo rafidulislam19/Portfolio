@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 // import emailjs from "@emailjs/browser";
 import "./contact.css";
+import { useEffect } from "react";
 
 const Contact = () => {
   const form = useRef();
@@ -13,6 +14,26 @@ const Contact = () => {
     });
     e.target.reset();
   };
+
+  useEffect(() => {
+  const contents = document.querySelectorAll(".contact__content");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    },
+    { threshold: 0.3 }
+  );
+
+  contents.forEach((el) => observer.observe(el));
+
+  return () => observer.disconnect();
+}, []);
+
   return (
     <section className="contact section" id="contact">
       <h2 className="section__title">Get in touch</h2>

@@ -79,13 +79,6 @@ body.dark-theme .work__card:hover {
   margin-bottom: var(--mb-0-5);
 }
 
-.work__description {
-  font-size: var(--small-font-size);
-  color: var(--text-color);
-  margin-bottom: 0.75rem;
-  line-height: 1.4;
-}
-
 .work__tags {
   display: flex;
   flex-wrap: wrap;
@@ -110,8 +103,9 @@ body.dark-theme .work__card:hover {
 
 /* ===== DESCRIPTION ===== */
 .work__description {
-  font-size: var(--small-font-size);
+  font-size: var(--smaller-font-size);
   color: var(--text-color);
+  margin-bottom: 0.75rem;
   line-height: 1.4;
 
   /* truncate to 2 lines */

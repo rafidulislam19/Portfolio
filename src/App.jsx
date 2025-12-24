@@ -14,12 +14,14 @@ import Footer from './components/footer/Footer'
 import ScrollUp from './components/scrollup/ScrollUp'
 import Projects from './components/projects/Projects'
 import Work from './components/work/Work'
+import BackgroundAnimation from './components/backgroundAnimation/BackgroundAnimation'
 
 
 function App() {
 
   return (
     <>
+    <BackgroundAnimation />
       <Header />
 
       <main className="main">

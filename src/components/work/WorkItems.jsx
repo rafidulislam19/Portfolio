@@ -28,13 +28,13 @@ const WorkItems = ({ item }) => {
       <img src={item.image} alt="" className="work__img" />
       <h3 className="work__title">{item.title}</h3>
 
-      <p className="work__description">{item.description}</p>
-
       <div className="work__tags">
         {item.tags.map((tag, index) => (
           <span className="work__tag" key={index}>{tag}</span>
         ))}
       </div>
+
+      {/* <p className="work__description">{item.description}</p> */}
 
       <div className="work__buttons">
         <a href={item.demoUrl} className="work__button">

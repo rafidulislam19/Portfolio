@@ -1,0 +1,21 @@
+.bg-particles {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  filter: blur(0.5px);
+}
+
+/* Dark mode support */
+body.dark-theme .particle {
+  background: rgba(255, 255, 255, 0.2);
+}
