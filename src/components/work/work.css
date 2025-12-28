@@ -27,6 +27,9 @@
 }
 
 .work__card {
+  width: 100%;
+  max-width: 320px;
+  overflow: hidden;
   background-color: var(--container-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 1.25rem;
@@ -69,9 +72,17 @@ body.dark-theme .work__card:hover {
 .work__img {
   width: 295px;
   height: 200px;
+  display: block;
   border-radius: 1rem;
   margin-bottom: var(--mb-1);
 }
+/* .work__img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 1rem;
+  margin-bottom: var(--mb-1);
+} */
 
 .work__title {
   font-size: var(--normal-font-size);
@@ -106,23 +117,56 @@ body.dark-theme .work__card:hover {
   font-size: var(--smaller-font-size);
   color: var(--text-color);
   margin-bottom: 0.75rem;
+  margin-top: 0.75rem;
   line-height: 1.4;
 
   /* truncate to 2 lines */
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  transition: all 0.3s ease;
 
   position: relative;
   margin-bottom: 0.75rem;
 }
 
-/* show full description on hover */
-.work__card:hover .work__description {
+.work__description.expanded {
   -webkit-line-clamp: unset;
   overflow: visible;
 }
+
+.work__description-text {
+  display: inline;
+}
+
+.work__see-more {
+  display: inline;
+  margin-left: 4px;
+
+  background: none;
+  border: none;
+  padding: 0;
+
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
+  color: var(--title-color);
+  cursor: pointer;
+}
+
+.work__description:not(:hover) .work__see-more {
+  display: inline;
+}
+
+/* .work__see-more:hover {
+  text-decoration: underline;
+} */
+
+/* show full description on hover */
+/* .work__card:hover .work__description {
+  -webkit-line-clamp: unset;
+  overflow: visible;
+} */
 
 .work__buttons {
   display: flex;
@@ -153,6 +197,62 @@ body.dark-theme .work__card:hover {
   background-color: var(--title-color);
   color: var(--container-color);
 }
+
+/* ================= PAGE TRANSITION ================= */
+
+.fade-page {
+  animation: fadeScale 0.45s ease;
+}
+
+@keyframes fadeScale {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ================= PAGINATION ================= */
+
+.work__pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 3rem;
+}
+
+.work__page-btn,
+.work__page-number {
+  font-size: 0.9rem;
+  padding: 0.4rem 0.75rem;
+  border-radius: 0.5rem;
+  background: var(--container-color);
+  color: var(--title-color);
+  border: 1px solid rgba(0,0,0,0.15);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.work__page-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.work__page-number.active-page {
+  background: var(--title-color);
+  color: var(--container-color);
+}
+
+.work__page-btn:hover,
+.work__page-number:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
 
 /*=============== BREAKPOINTS ===============*/
 /* For large devices */
