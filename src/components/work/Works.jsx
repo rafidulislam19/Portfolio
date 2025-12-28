@@ -27,18 +27,18 @@
 //     setItem({name: e.target.textContent.toLowerCase() });
 //     setActive(index);
 //   };
-    
+
 //   return (
 
 //     <div >
 //         <div className="work__filters">
-        
+
 //             {
 //                 projectsNav.map((item, index) => {
 //                     return (
 //                     <span onClick={(e) => {
 //                         handleClick(e, index);
-//                     }} 
+//                     }}
 //                     className={`${active === index ? 'active-work' : ""}
 //                     work__item`} key= {index}>
 //                         {item.name}
@@ -59,7 +59,7 @@
 
 // export default Works
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { projectsData, projectsNav } from "./Data";
 import WorkItems from "./WorkItems";
 
@@ -71,6 +71,9 @@ const Works = ({ scrollRef }) => {
   const [active, setActive] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
 
+  /* ✅ TRACK USER PAGINATION ACTION */
+  const isUserPaginating = useRef(false);
+
   /* FILTER PROJECTS */
   useEffect(() => {
     if (item.name === "all") {
@@ -78,35 +81,37 @@ const Works = ({ scrollRef }) => {
     } else {
       setProjects(
         projectsData.filter(
-          (project) =>
-            project.category.toLowerCase() === item.name
+          (project) => project.category.toLowerCase() === item.name
         )
       );
     }
     setCurrentPage(1);
   }, [item]);
 
-  /* PAGINATION */
+  /* PAGINATION DATA */
   const totalPages = Math.ceil(projects.length / ITEMS_PER_PAGE);
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
-  const currentItems = projects.slice(
-    startIndex,
-    startIndex + ITEMS_PER_PAGE
-  );
+  const currentItems = projects.slice(startIndex, startIndex + ITEMS_PER_PAGE);
 
-  /* 🎯 SCROLL AFTER PAGE CHANGE */
+  /* 🎯 SCROLL ONLY AFTER USER ACTION */
   useEffect(() => {
-    if (scrollRef?.current) {
+    if (isUserPaginating.current && scrollRef?.current) {
       scrollRef.current.scrollIntoView({
         behavior: "smooth",
         block: "start",
       });
     }
+    isUserPaginating.current = false;
   }, [currentPage, scrollRef]);
 
   const handleClick = (e, index) => {
     setItem({ name: e.target.textContent.toLowerCase() });
     setActive(index);
+  };
+
+  const changePage = (page) => {
+    isUserPaginating.current = true;
+    setCurrentPage(page);
   };
 
   return (
@@ -117,9 +122,7 @@ const Works = ({ scrollRef }) => {
           <span
             key={index}
             onClick={(e) => handleClick(e, index)}
-            className={`work__item ${
-              active === index ? "active-work" : ""
-            }`}
+            className={`work__item ${active === index ? "active-work" : ""}`}
           >
             {item.name}
           </span>
@@ -139,9 +142,7 @@ const Works = ({ scrollRef }) => {
           <button
             className="work__page-btn"
             disabled={currentPage === 1}
-            onClick={() =>
-              setCurrentPage((prev) => Math.max(prev - 1, 1))
-            }
+            onClick={() => changePage(currentPage - 1)}
           >
             ⏮ Prev
           </button>
@@ -152,7 +153,7 @@ const Works = ({ scrollRef }) => {
               className={`work__page-number ${
                 currentPage === index + 1 ? "active-page" : ""
               }`}
-              onClick={() => setCurrentPage(index + 1)}
+              onClick={() => changePage(index + 1)}
             >
               {index + 1}
             </button>
@@ -161,11 +162,7 @@ const Works = ({ scrollRef }) => {
           <button
             className="work__page-btn"
             disabled={currentPage === totalPages}
-            onClick={() =>
-              setCurrentPage((prev) =>
-                Math.min(prev + 1, totalPages)
-              )
-            }
+            onClick={() => changePage(currentPage + 1)}
           >
             Next ⏭
           </button>
