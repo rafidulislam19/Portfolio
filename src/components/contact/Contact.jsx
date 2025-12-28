@@ -16,23 +16,23 @@ const Contact = () => {
   };
 
   useEffect(() => {
-  const contents = document.querySelectorAll(".contact__content");
+    const contents = document.querySelectorAll(".contact__content");
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("show");
-        }
-      });
-    },
-    { threshold: 0.3 }
-  );
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
 
-  contents.forEach((el) => observer.observe(el));
+    contents.forEach((el) => observer.observe(el));
 
-  return () => observer.disconnect();
-}, []);
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section className="contact section" id="contact">
@@ -67,7 +67,7 @@ const Contact = () => {
               <span className="contact__card-data">+8801983435756</span>
 
               <a
-                href="https://api.whatsapp.com/send?phone=62214408789&text=Hello, more information!"
+                href="https://api.whatsapp.com/send?phone=+8801983435756&text=Hello, more information!"
                 className="contact__button"
               >
                 Write Me{" "}
@@ -80,7 +80,10 @@ const Contact = () => {
               <h3 className="contact__card-title">Messenger</h3>
               <span className="contact__card-data">user.fb123</span>
 
-              <a href="https://m.me/crypticalcoder" className="contact__button">
+              <a
+                href="https://m.me/rafidislam.hridoy"
+                className="contact__button"
+              >
                 Write Me{" "}
                 <i className="bx bx-right-arrow-alt contact__button-icon"></i>
               </a>
