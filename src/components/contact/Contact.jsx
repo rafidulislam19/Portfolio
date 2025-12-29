@@ -343,7 +343,7 @@ const Contact = () => {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.7, opacity: 0 }}
             >
-              <h3>✅ Email Sent!</h3>
+              <h3>✅  Email Sent!</h3>
               <p>I’ll get back to you soon.</p>
               <button
                 className="button"
