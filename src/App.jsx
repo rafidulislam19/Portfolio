@@ -21,7 +21,7 @@ function App() {
 
   return (
     <>
-    <BackgroundAnimation />
+    {/* <BackgroundAnimation /> */}
       <Header />
 
       <main className="main">
