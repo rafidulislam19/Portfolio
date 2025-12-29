@@ -54,7 +54,7 @@ import React, { useEffect, useRef, useState } from "react";
 
 const WorkItems = ({ item }) => {
   const cardRef = useRef(null);
-  const descRef = useRef(null);
+  const textRef = useRef(null);
 
   const [visible, setVisible] = useState(false);
   const [expanded, setExpanded] = useState(false);
@@ -76,14 +76,16 @@ const WorkItems = ({ item }) => {
     return () => observer.disconnect();
   }, []);
 
-  /* === Detect text truncation === */
+  /* === Detect truncation (3 lines) === */
   useEffect(() => {
-    if (descRef.current) {
-      const isOverflowing =
-        descRef.current.scrollHeight > descRef.current.clientHeight;
-      setIsTruncated(isOverflowing);
-    }
-  }, []);
+    if (!textRef.current) return;
+
+    const el = textRef.current;
+    const lineHeight = parseFloat(getComputedStyle(el).lineHeight);
+    const maxHeight = lineHeight * 3;
+
+    setIsTruncated(el.scrollHeight > maxHeight);
+  }, [item.description]);
 
   return (
     <div
@@ -100,14 +102,19 @@ const WorkItems = ({ item }) => {
       </div>
 
       {/* DESCRIPTION */}
-      <p className="work__description">
-        <span className="work__description-text">
+      <p className={`work__description ${expanded ? "expanded" : ""}`}>
+        <span ref={textRef} className="work__description-text">
           {item.description}
         </span>
 
-        {/* <button className="work__see-more">
-          See more
-        </button> */}
+        {isTruncated && (
+          <button
+            className="work__see-more"
+            onClick={() => setExpanded(!expanded)}
+          >
+            {expanded ? " See less" : " See more"}
+          </button>
+        )}
       </p>
 
       <div className="work__buttons">
