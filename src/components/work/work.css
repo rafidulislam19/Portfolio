@@ -277,9 +277,9 @@ body.dark-theme .work__card:hover {
 }
 
 @media screen and (max-width: 576px) {
-  .work__container {
-    grid-template-columns: 1fr;
-  }
+  /* .work__container {
+    grid-template-columns: max-content;
+  } */
   .work__img {
     width: 100%;
   }
